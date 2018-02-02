@@ -49,6 +49,11 @@
     XCTAssertNotNil(result.photos);
     XCTAssert([result.stat isEqualToString:@"ok"]);
     XCTAssert(result.photos.photo.count == 100);
+    
+    NSArray *itemsToAdd = [_model photosLoaded:result.photos.photo];
+    XCTAssertNotNil(itemsToAdd);
+    XCTAssert(itemsToAdd.count == 100);
+    XCTAssert([_model numberOfPhotos] == 100);
 }
 
 - (void)testPerformanceExample
