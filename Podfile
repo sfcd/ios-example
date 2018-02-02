@@ -4,12 +4,12 @@ platform :ios, '8.0'
 use_frameworks!
 
 def import_pods_model
-    pod 'EasyMapping'
+    pod 'EasyMapping','~> 0.21.2'
 end
 
 def import_pods
-   pod 'AFNetworking'
-   pod 'PureLayout'
+   pod 'AFNetworking','~> 3.1.0'
+   pod 'PureLayout','~> 3.0.2'
 end
 
 
